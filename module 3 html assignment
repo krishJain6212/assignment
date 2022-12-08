@@ -1,0 +1,80 @@
+Q.1 What are the new tags added in HTML5?
+
+ANS--> [1] <article>
+       [2] <header>
+       [3] <footer>
+       [4] <nav>
+       [5] <section>
+       [6] <aside>
+
+Q.2 How to embed audio and video in a webpage?
+
+ANS--> [1]  AUDIO
+
+   to embed audio in html, we use the <audio> tag. 
+
+   SYNTAX:
+
+   <audio>
+          <source src="path/filename/filetype" controls> 
+
+          </audio>
+
+       [2] VIDEO
+       
+   SYNTAX:  
+
+       <video>
+             <source src="path/filename/filetype" controls>
+
+       </video>
+
+       [3] by EMBED tag [comes with its default size and controls and can embed the audio,video files from URL also...]
+
+       SYNTAX:
+
+             <embed src="path/filename/filetype">
+
+
+Q.3 semantic element in html5 ?
+
+ANS-->  The semantic elements in html5 are:
+
+
+        <article>
+        <aside>
+        <details>
+        <figcaption>
+        <figure>
+        <footer>
+        <header>
+        <main>
+        <mark>
+        <nav>
+        <section>
+        <summary>
+        <time>
+
+
+Q.4 canvas and svg tags?
+
+ANS-->   Canvas: The HTML element is used to draw graphics on the fly, via scripting (usually JavaScript). The element is only a container for graphics. You must use a script to actually draw the graphics. Canvas has several methods for drawing paths, boxes, circles, text, and adding images.
+
+
+ EXAMPLE: 
+
+
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+
+
+
+SVG: The Scalable Vector Graphics (SVG) is an XML-based image format that is used to define two-dimensional vector-based graphics for the web. Unlike raster image (Ex .jpg, .gif, .png, etc.), a vector image can be scaled up or down to any extent without losing the image quality.
+
+
+EXAMPLE: 
+
+
+          <svg width="400" height="100">
+  <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+</svg>
