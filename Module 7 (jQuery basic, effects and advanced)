@@ -56,6 +56,3 @@ syntax:
 
 (selector).animate({styles},speed,easing,callback)
 
-How to create slider with animation//
-
-Event bubbling tickling example//
