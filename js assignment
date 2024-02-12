@@ -1,0 +1,33 @@
+Q.1 What is JavaScript. How to use it?
+Q.2 How many type of Variable in JavaScript?
+Q.3 Define a Data Types in js?
+Q.4 Write a mul Function Which will Work Properly When invoked With Following Syntax.
+Q.5 What the deference between undefined and undeclare in JavaScript?
+Q.6 Using console.log() print out the following statement: The quote 'There is no exercise
+better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
+help one another. Using console.log() print out the following quote by Mother Teresa:
+Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?
+Q.8 Write a JavaScript Program to find the area of a triangle?
+Q.9 Write a JavaScript program to calculate days left until next Christmas?
+Q.10 What is Condition Statement?
+Q.11 Find circumference of Rectangle formula : C = 4 * a ?
+Q.12 WAP to convert years into days and days into years?
+Q.13 Convert temperature Fahrenheit to Celsius? (Conditional logic Question)
+Q.14 Write a JavaScript exercise to get the extension of a filename.?
+Q.15 What is the result of the expression (5 > 3 && 2 < 4)?
+Q.16 What is the result of the expression (true && 1 && "hello")?
+Q.17 What is the result of the expression true && false || false && true?
+Q.18 What is a Loop and Switch Case in JavaScript define that ?
+Q.19 What is the use of is Nan function?
+Q.20 What is the difference between && and || in JavaScript?
+Q.21 What is the use of Void (0)?
+Q.22 Check Number Is Positive or Negative in JavaScript?
+Q.23 Find the Character Is Vowel or Not ?
+Q.24 Write to check whether a number is negative, positive or zero?
+Q.25 Write to find number is even or odd using ternary operator in JS?
+Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
+Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?
+Q.28 Write to find the largest of three numbers in JS?
+Q.29 Write to show
+i. Monday to Sunday using switch case in JS?
+ii. Vowel or Consonant using switch case in JS?

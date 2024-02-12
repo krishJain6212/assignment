@@ -1,0 +1,61 @@
+Module 7 (jQuery basic, effects and advanced)
+
+What is jQuery?
+
+--> jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers
+
+
+ How to Apply CSS Using JQuery, How to Add Class and Remove Class in
+Jquery, JQuery Animation?
+
+
+--> The css() method sets or returns one or more style properties for the selected elements.
+
+there are various ways to apply css in jQuery:
+
+syntax:
+
+(1) Return the CSS property value:
+
+$(selector).css(property)
+
+
+(2) Set the CSS property and value:
+
+$(selector).css(property,value)
+
+
+(3) Set CSS property and value using a function:
+
+$(selector).css(property,function(index,currentvalue))
+
+
+(4) Set multiple properties and values:
+
+$(selector).css({property:value, property:value, ...})
+
+
+
+
+--> Using the addClass() and removeClass() methods
+The addClass() and removeClass() methods are respectively used to add and remove the CSS classes when there is a need to add or remove them from the webpage on the occurrence of an event.
+
+syntax:
+
+// Adding class using addClass()
+$('selector').addClass(class_name);
+// Adding class using removeClass()
+$('selector').removeClass(class_name);
+
+
+--> The animate() method performs a custom animation of a set of CSS properties.
+
+This method changes an element from one state to another with CSS styles. The CSS property value is changed gradually, to create an animated effect.
+
+syntax:
+
+(selector).animate({styles},speed,easing,callback)
+
+How to create slider with animation//
+
+Event bubbling tickling example//
