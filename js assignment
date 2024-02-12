@@ -1,33 +1,247 @@
 Q.1 What is JavaScript. How to use it?
+
+--> JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at — displaying timely content updates, interactive maps, animated 2D/3D graphics, scrolling video jukeboxes, etc
+
+Practical Applications of JavaScript
+Web Development.
+Web Applications
+Presentation
+Server Applications
+Web Servers
+Games
+Art
+Smartwatch Apps
+
 Q.2 How many type of Variable in JavaScript?
+
+-->A JavaScript variable is simply a name of storage location. There are two types of variables in JavaScript : local variable and global variable.
+
+example of local variable :
+ 
+ <script>  
+function abc(){  
+var x=10;//local variable  
+}  
+</script>  
+
+example of global variable :
+
+<script>  
+var data=200;//gloabal variable  
+function a(){  
+document.writeln(data);  
+}  
+function b(){  
+document.writeln(data);  
+}  
+a();//calling JavaScript function  
+b();  
+</script>  
+
 Q.3 Define a Data Types in js?
+
+-->JavaScript provides different data types to hold different types of values. There are two types of data types in JavaScript.
+
+Primitive data type
+
+String : represents sequence of characters e.g. "hello"
+Number : represents numeric values e.g. 100
+Boolean : represents boolean value either false or true
+Undefined : represents undefined value
+Null
+
+Non-primitive (reference) data type
+
+Object : represents instance through which we can access members
+Array :	represents group of similar values
+
+JavaScript is a dynamic type language, means you don't need to specify type of the variable because it is dynamically used by JavaScript engine. You need to use var here to specify the data type. It can hold any type of values such as numbers, strings etc. 
+
+
 Q.4 Write a mul Function Which will Work Properly When invoked With Following Syntax.
+
+-->The MUL function is a miniature of the multiplication function. In this function, we call the function that required an argument as a first number, and that function calls another function that required another argument and this step goes on. 
+
+example : 
+<script> 
+	function mul(x) { 
+	return function(y) { 
+		return function(z) { 
+		return x*y*z; 
+		}; 
+	} 
+	} 
+	
+	console.log(mul(2)(3)(5)); 
+	console.log(mul(2)(3)(4)); 
+</script>
+
+
 Q.5 What the deference between undefined and undeclare in JavaScript?
+
+--> Undefined: It occurs when a variable has been declared but has not been assigned any value. Undefined is not a keyword. 
+
+Undeclared: It occurs when we try to access any variable that is not initialized or declared earlier using the var or const keyword. 
+
+
 Q.6 Using console.log() print out the following statement: The quote 'There is no exercise
 better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
 help one another. Using console.log() print out the following quote by Mother Teresa:
+
+--> console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.");
+
+console.log("Spread love everywhere you go. Let no one ever come to you without leaving happier. - Mother Teresa");
+
 Q.7 Check if typeof '10' is exactly equal to 10. If not make it exactly equal?
+
+--> if (typeof '10' === typeof 10) {
+    console.log("typeof '10' is exactly equal to 10.");
+} else {
+    console.log("typeof '10' is not exactly equal to 10.");
+    // Convert '10' to a number
+    var a = parseInt('10');
+    if (typeof a === typeof 10) {
+        console.log("After conversion, '10' is exactly equal to 10.");
+    } else {
+        console.log("Conversion failed. '10' is still not exactly equal to 10.");
+    }
+}
+
+
 Q.8 Write a JavaScript Program to find the area of a triangle?
+
+--> function calculateTriangleArea(base, height) {
+    
+    var area = (base * height) / 2;
+    return area;
+}
+
+
+var base = 5;
+var height = 8;
+var area = calculateTriangleArea(base, height);
+console.log("The area of the triangle with base", base, "and height", height, "is", area);
+
+
 Q.9 Write a JavaScript program to calculate days left until next Christmas?
+
+--> function Christmas() {
+    
+    var today = new Date();
+
+    
+    var Year = today.getFullYear();
+
+    
+    var b = new Date(currentYear, 11, 25);  
+
+    
+    if (today.getMonth() === 11 && today.getDate() > 25) {
+        b.setFullYear(Year + 1);
+    }
+
+    
+    var timeDifference = b.getTime() - today.getTime();
+
+    var daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+    return daysLeft;
+}
+
+
 Q.10 What is Condition Statement?
+
+--> In any programming language, the code needs to make decisions and carry out actions accordingly depending on different inputs. For example, in a game, if the player's number of lives is 0, then it's game over. In a weather app, if it is being looked at in the morning, show a sunrise graphic; show stars and a moon if it is nighttime. In this article, we'll explore how so-called conditional statements work in JavaScript. if else, else if.
+
+example
+
+if (condition) {
+  /* code to run if condition is true */
+} else {
+  /* run some other code instead */
+}
+
 Q.11 Find circumference of Rectangle formula : C = 4 * a ?
+
+--> 
+
+function perimeter(length, width) {
+    return 2 * (length + width);
+}
+
+
+
+const length = 5;
+const width = 3;
+const c = Perimeter(length, width);
+console.log("Perimeter of Rectangle:", perimeter);
+
+
+
+
+
 Q.12 WAP to convert years into days and days into years?
+
+
 Q.13 Convert temperature Fahrenheit to Celsius? (Conditional logic Question)
+
+
 Q.14 Write a JavaScript exercise to get the extension of a filename.?
+
+
 Q.15 What is the result of the expression (5 > 3 && 2 < 4)?
+
+
 Q.16 What is the result of the expression (true && 1 && "hello")?
+
+
 Q.17 What is the result of the expression true && false || false && true?
+
+
 Q.18 What is a Loop and Switch Case in JavaScript define that ?
+
+--> Loops are used in JavaScript to perform repeated tasks based on a condition. Conditions typically return true or false. A loop will continue running until the defined condition returns false.
+
+The switch statement evaluates an expression. The value of the expression is then compared with the values of each case in the structure. 
+
+
 Q.19 What is the use of is Nan function?
+
+-->The isNaN() function determines whether a value is NaN, first converting the value to a number if necessary. Because coercion inside the isNaN() function can be surprising, you may prefer to use Number.isNaN().
+
+syntax 
+
+isNaN(value)
+
 Q.20 What is the difference between && and || in JavaScript?
+
+--> || means “or”. It evaluates to true if the expression on either side is truthy. && means “and”.
+
 Q.21 What is the use of Void (0)?
+
+--> It is used to prevent any side effects caused while inserting an expression in a web page.
+
 Q.22 Check Number Is Positive or Negative in JavaScript?
+
+
 Q.23 Find the Character Is Vowel or Not ?
+
+
 Q.24 Write to check whether a number is negative, positive or zero?
+
+
 Q.25 Write to find number is even or odd using ternary operator in JS?
+
+
 Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
+
+
 Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?
+
+
 Q.28 Write to find the largest of three numbers in JS?
+
+
 Q.29 Write to show
 i. Monday to Sunday using switch case in JS?
 ii. Vowel or Consonant using switch case in JS?
