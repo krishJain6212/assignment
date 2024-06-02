@@ -1,0 +1,30 @@
+Lifecycle in Class Components:
+Mounting Phase:
+
+constructor: This is the first method called when a component is created. It's used for initializing state and binding event handlers.
+componentWillMount (deprecated): Invoked just before rendering occurs on the client-side. Not commonly used due to its potential issues with side-effects.
+render: This method is required and returns the JSX that represents the UI of the component.
+componentDidMount: Invoked immediately after the component and all its children have been rendered to the DOM. It's a good place to perform side-effects like data fetching.
+Updating Phase:
+
+componentWillReceiveProps (deprecated): Invoked when a component is receiving new props. Not commonly used due to its replacement by getDerivedStateFromProps.
+shouldComponentUpdate: Allows optimization by preventing unnecessary re-renders. Returns true to continue with the update or false to halt it.
+componentWillUpdate (deprecated): Invoked just before rendering when new props or state are received. Not commonly used due to its replacement by getDerivedStateFromProps and getSnapshotBeforeUpdate.
+render: This method is called again to re-render the component with updated props or state.
+componentDidUpdate: Invoked immediately after updating occurs. It's a good place to perform DOM operations or data fetching based on props/state changes.
+Unmounting Phase:
+
+componentWillUnmount: Invoked immediately before a component is unmounted and destroyed. It's used for cleanup tasks like clearing timers or event listeners.
+Lifecycle in Functional Components with Hooks:
+Mounting Phase:
+
+useState: Used to initialize state in functional components.
+useEffect: Invoked after every render. It combines the functionality of componentDidMount, componentDidUpdate, and componentWillUnmount. It's used for data fetching, DOM manipulations, and cleanup tasks.
+Updating Phase:
+
+useState: Used to update state in functional components.
+useEffect: Invoked after every render, just like in the mounting phase. You can conditionally execute effects based on props or state changes.
+Unmounting Phase:
+
+useEffect: You can return a cleanup function from useEffect to perform cleanup tasks when the component unmounts.
+Functional components with hooks provide a more concise and expressive way to manage component lifecycle compared to class components. They also encourage the separation of concerns by allowing you to organize logic into reusable hook
