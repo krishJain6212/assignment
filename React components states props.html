@@ -1,0 +1,93 @@
+• What is React Js?
+
+--> React is a JavaScript library for building user interfaces, developed by Facebook. It allows developers to create reusable UI components that can efficiently update and render when the data changes. React uses a declarative and component-based approach to building UIs, making it easier to manage and maintain complex applications.
+
+
+• What is NPM in React Js?
+
+--> NPM (Node Package Manager) is a package manager for JavaScript and the default package manager for React applications. It allows developers to install, manage, and share reusable code packages (libraries, frameworks, tools) from the NPM registry. React projects often use NPM to manage dependencies and run scripts for tasks like building, testing, and deploying applications.
+
+
+• What is Role of Node Js in react Js?
+
+--> Node.js is used as a runtime environment for running JavaScript code outside the browser. While React itself is a client-side library for building UIs, Node.js is commonly used in React development for server-side rendering, creating APIs, and managing project dependencies using NPM.
+
+
+• What is CLI command In React Js?
+
+--> CLI (Command-Line Interface) commands in React.js are used to perform various tasks related to React application development. For example, you can use create-react-app CLI command to quickly set up a new React project, npm start to start the development server, npm build to build the production-ready bundle, and npm test to run tests.
+
+• What is Components in React Js?
+
+--> Components are the building blocks of React applications. They are reusable and independent pieces of UI that encapsulate the UI logic and presentation. Components can be class-based (using ES6 classes) or functional (using functional components). React applications are typically composed of multiple nested components, allowing for a modular and maintainable architecture.
+
+• What is Header and Content Components in React Js?
+
+--> In a React application, the Header and Content components are examples of reusable UI components that represent different parts of the user interface. The Header component might contain the application's logo, navigation links, and user authentication controls, while the Content component might display dynamic content or data fetched from an API.
+
+• How to install React Js on Windows, Linux Operating System? How to Install
+NPM and How to check version of NPM?
+
+--> To install React.js on Windows or Linux, you can use the create-react-app CLI command. First, make sure you have Node.js installed on your system. Then open your terminal or command prompt and run the following command:
+
+npx create-react-app my-app
+
+This command will create a new React project named my-app in the current directory. To install NPM, you need to install Node.js, as NPM comes bundled with Node.js. To check the version of NPM installed on your system, you can run the following command:
+
+npm -v
+
+• How to check version of React Js?
+
+--> To check the version of React.js used in your project, you can navigate to your project directory in the terminal or command prompt and run the following command:
+
+ npm list react
+
+
+• How to change in components of React Js?
+
+--> To make changes to components in React.js, you can edit the corresponding component files in your project directory. You can modify the JSX markup, update the component logic, add event handlers, and manage state as needed to implement the desired functionality.
+
+• How to Create a List View in React Js?
+
+--> To create a list view in React.js, you can use the map() method to iterate over an array of data and render a list of components dynamically. Here's a basic example:
+
+import React from 'react';
+
+const ListView = ({ items }) => {
+    return (
+        <ul>
+            {items.map((item, index) => (
+                <li key={index}>{item}</li>
+            ))}
+        </ul>
+    );
+};
+
+export default ListView;
+
+Create Increment decrement state change by button click?
+
+--> import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(count + 1);
+  };
+
+  const decrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <h2>Counter</h2>
+      <button onClick={increment}>Increment</button>
+      <button onClick={decrement}>Decrement</button>
+      <p>Count: {count}</p>
+    </div>
+  );
+}
+
+export default Counter;
