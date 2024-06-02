@@ -182,21 +182,73 @@ console.log("Perimeter of Rectangle:", perimeter);
 
 Q.12 WAP to convert years into days and days into years?
 
+--> function yearsToDays(years) {
+    return years * 365;
+}
+
+function daysToYears(days) {
+    return days / 365; 
+}
+
+console.log("5 years is equal to " + yearsToDays(5) + " days");
+console.log("1825 days is equal to " + daysToYears(1825) + " years");
+
 
 Q.13 Convert temperature Fahrenheit to Celsius? (Conditional logic Question)
+
+-->  function fahrenheitToCelsius(fahrenheit) {
+    if (typeof fahrenheit !== 'number') {
+        return "Input is not a number";
+    }
+
+    if (fahrenheit < -459.67) {
+        return "Temperature is below absolute zero";
+    }
+
+    var celsius = (fahrenheit - 32) * 5/9;
+    return celsius;
+}
+
+console.log("32°F is equal to " + fahrenheitToCelsius(32) + "°C");
+
 
 
 Q.14 Write a JavaScript exercise to get the extension of a filename.?
 
+--> function getFileExtension(filename) {
+    
+    if (typeof filename !== 'string') {
+        return "Input is not a string";
+    }
+
+    
+    var lastIndex = filename.lastIndexOf('.');
+
+    
+    if (lastIndex !== -1 && lastIndex !== 0 && lastIndex !== filename.length - 1) {
+       
+        var extension = filename.substring(lastIndex + 1);
+        return extension;
+    } else {
+        return "No extension found";
+    }
+}
+
+
+
 
 Q.15 What is the result of the expression (5 > 3 && 2 < 4)?
+
+--> true
 
 
 Q.16 What is the result of the expression (true && 1 && "hello")?
 
+--> hello
 
 Q.17 What is the result of the expression true && false || false && true?
 
+--> false
 
 Q.18 What is a Loop and Switch Case in JavaScript define that ?
 
@@ -223,25 +275,794 @@ Q.21 What is the use of Void (0)?
 
 Q.22 Check Number Is Positive or Negative in JavaScript?
 
+--> function checkNumber(number) {
+    if (number > 0) {
+        return "Positive";
+    } else if (number < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
+
 
 Q.23 Find the Character Is Vowel or Not ?
+
+--> function isVowel(character) {
+
+    var lowerCaseChar = character.toLowerCase();
+
+    if (lowerCaseChar === 'a' || lowerCaseChar === 'e' || lowerCaseChar === 'i' || lowerCaseChar === 'o' || lowerCaseChar === 'u') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 
 Q.24 Write to check whether a number is negative, positive or zero?
 
+--> function checkNumber(number) {
+    if (number > 0) {
+        return "Positive";
+    } else if (number < 0) {
+        return "Negative";
+    } else {
+        return "Zero";
+    }
+}
+
 
 Q.25 Write to find number is even or odd using ternary operator in JS?
+
+--> function checkEvenOrOdd(number) {
+    
+    var result = (number % 2 === 0) ? "Even" : "Odd";
+    return result;
+}
 
 
 Q.26 Write find maximum number among 3 numbers using ternary operator in JS?
 
+--> function findMaxNumber(num1, num2, num3) {
+
+    var max = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
+    return max;
+}
+
+
+
 
 Q.27 Write to find minimum number among 3 numbers using ternary operator in JS?
+
+--> function findMinNumber(num1, num2, num3) {
+    var min = (num1 < num2) ? ((num1 < num3) ? num1 : num3) : ((num2 < num3) ? num2 : num3);
+    return min;
+}
+
 
 
 Q.28 Write to find the largest of three numbers in JS?
 
+--> function findLargestNumber(num1, num2, num3) {
+
+    var largest = (num1 > num2) ? ((num1 > num3) ? num1 : num3) : ((num2 > num3) ? num2 : num3);
+    return largest;
+}
+
 
 Q.29 Write to show
 i. Monday to Sunday using switch case in JS?
+
+--> function printDayOfWeek(dayNumber) {
+    switch(dayNumber) {
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        case 4:
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+            break;
+        case 7:
+            console.log("Sunday");
+            break;
+        default:
+            console.log("Invalid day number");
+    }
+}
+
+
+
+
 ii. Vowel or Consonant using switch case in JS?
+
+--> function checkVowelOrConsonant(character) {
+    switch(character.toLowerCase()) {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'o':
+        case 'u':
+            console.log(character + " is a vowel");
+            break;
+        default:
+            console.log(character + " is a consonant");
+    }
+}
+
+Q.30 What are the looping structures in JavaScript? Any one Example?
+
+--> JavaScript supports several looping structures:
+
+for loop
+while loop
+do-while loop
+for...in loop (for iterating over object properties)
+for...of loop (for iterating over iterable objects like arrays)
+Example using for loop:
+
+for (let i = 1; i <= 5; i++) {
+    console.log(i);
+}
+
+Q.31 Write a print 972 to 897 using for loop in JS?
+
+--> for (let i = 972; i >= 897; i--) {
+    console.log(i);
+}
+
+Q.32 Write to print factorial of given number?
+
+-->function factorial(n) {
+    if (n === 0 || n === 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+console.log("Factorial of 5:", factorial(5)); 
+
+Q.33 Write to print Fibonacci series up to given numbers?
+
+--> function fibonacciSeries(limit) {
+    let fib = [0, 1];
+    for (let i = 2; fib[i - 1] + fib[i - 2] <= limit; i++) {
+        fib.push(fib[i - 1] + fib[i - 2]);
+    }
+    return fib;
+}
+console.log("Fibonacci series up to 50:", fibonacciSeries(50)); 
+
+Q.34 Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?
+
+--> function reverseNumber(number) {
+    return parseInt(number.toString().split('').reverse().join(''));
+}
+console.log("Reverse of 64728:", reverseNumber(64728)); 
+
+Q.35 Write a program make a summation of given number (E.g., 1523 Ans: - 11) in JS?
+
+--> function sumOfDigits(number) {
+    let sum = 0;
+    while (number !== 0) {
+        sum += number % 10;
+        number = Math.floor(number / 10);
+    }
+    return sum;
+}
+console.log("Summation of digits of 1523:", sumOfDigits(1523)); 
+
+Q.36 Write a program you have to make a summation of first and last Digit. (E.g., 1234 Ans: -
+5) in JS?
+
+--> function sumOfFirstAndLastDigit(number) {
+    let lastDigit = number % 10;
+    while (number >= 10) {
+        number = Math.floor(number / 10);
+    }
+    return lastDigit + number;
+}
+console.log("Sum of first and last digit of 1234:", sumOfFirstAndLastDigit(1234)); 
+
+Q.37 Use console.log() and escape characters to print the following pattern in JS?
+1 1 1 1 1
+2 1 2 4 8
+3 1 3 9 27
+4 1 4 16 64
+5 1 5 25 125
+
+--> console.log("1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125");
+
+
+Q.38 Use pattern in console.log in JS?
+1) 1
+1 0
+1 0 1
+1 0 1 0
+1 0 1 0 1
+
+--> console.log("1");
+console.log("1 0");
+console.log("1 0 1");
+console.log("1 0 1 0");
+console.log("1 0 1 0 1");
+
+2) A
+B C
+D E F
+G H I J
+K L M N O
+
+--> console.log("A");
+console.log("B C");
+console.log("D E F");
+console.log("G H I J");
+console.log("K L M N O");
+
+3) 1
+2 3
+4 5 6
+7 8 9 10
+11 12 13 14 15
+
+--> console.log("1");
+console.log("2 3");
+console.log("4 5 6");
+console.log("7 8 9 10");
+console.log("11 12 13 14 15");
+
+
+4) *
+* *
+* * *
+* * * *
+* * * * *
+
+--> console.log("*");
+console.log("* *");
+console.log("* * *");
+console.log("* * * *");
+console.log("* * * * *");
+
+Q.39 Accept 3 numbers from user using while loop and check each numbers palindrome? 
+
+--> function isPalindrome(number) {
+    const originalNumber = number;
+    let reversedNumber = 0;
+
+    while (number > 0) {
+        const digit = number % 10;
+        reversedNumber = reversedNumber * 10 + digit;
+        number = Math.floor(number / 10);
+    }
+
+    return originalNumber === reversedNumber;
+}
+
+let count = 1;
+while (count <= 3) {
+    const inputNumber = parseInt(prompt("Enter number " + count + ":"));
+    
+    if (isNaN(inputNumber)) {
+        console.log("Invalid input. Please enter a valid number.");
+    } else {
+        const result = isPalindrome(inputNumber);
+        console.log("Number " + inputNumber + " is " + (result ? "a palindrome." : "not a palindrome."));
+        count++;
+    }
+}
+Q.40 Write a JavaScript Program to display the current day and time in the following format.
+Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ?
+
+--> function getCurrentDayAndTime() {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const currentTime = new Date();
+    const currentDay = days[currentTime.getDay()];
+    let currentHour = currentTime.getHours();
+    const meridiem = currentHour >= 12 ? 'PM' : 'AM';
+    currentHour = currentHour % 12 || 12;
+    const currentMinute = currentTime.getMinutes();
+    const currentSecond = currentTime.getSeconds();
+
+    return "Today is " + currentDay + ". Current Time is " + currentHour + " " + meridiem + ": " + currentMinute + " : " + currentSecond;
+}
+
+console.log(getCurrentDayAndTime());
+
+
+Q.41 Write a JavaScript program to get the current date?
+
+--> const currentDate = new Date();
+console.log("Current Date: " + currentDate);
+
+
+Q.42 Write a JavaScript program to compare two objects?
+
+-->const obj1 = { a: 1, b: 2 };
+const obj2 = { b: 2, a: 1 };
+
+const isEqual = JSON.stringify(obj1) === JSON.stringify(obj2);
+console.log("Are the two objects equal?", isEqual);
+
+Q.43 Write a JavaScript program to convert an array of objects into CSV string?
+
+--> const data = [
+    { name: "John", age: 30, city: "New York" },
+    { name: "Alice", age: 25, city: "Los Angeles" },
+    { name: "Bob", age: 35, city: "Chicago" }
+];
+
+const csvString = data.map(obj => Object.values(obj).join(',')).join('\n');
+console.log(csvString);
+
+Q.44 Write a JavaScript program to capitalize first letter of a string?
+
+--> function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+const inputString = "hello world";
+console.log("Capitalized string:", capitalizeFirstLetter(inputString));
+
+Q. 45 Write a JavaScript program to determine if a variable is array?
+
+--> function isArray(variable) {
+    return Array.isArray(variable);
+}
+
+console.log("Is [1, 2, 3] an array?", isArray([1, 2, 3]));
+
+Q.46 Write a JavaScript program to clone an array?
+
+--> const originalArray = [1, 2, 3, 4, 5];
+const clonedArray = originalArray.slice();
+
+console.log("Cloned array:", clonedArray);
+
+Q.47 What is the drawback of declaring methods directly in JavaScript objects?
+
+--> If methods are declared directly in JavaScript objects, they get copied to every instance of that object, consuming more memory. This is inefficient, especially if the methods remain the same across all instances.
+
+
+
+Q.48 Print the length of the string on the browser console using console.log()?
+
+--> 
+ const str = "Hello, World!";
+console.log("Length of the string:", str.length);
+
+Q.49 Change all the string characters to capital letters using toUpperCase() method?
+
+--> const str = "hello, world!";
+const capitalizedStr = str.toUpperCase();
+console.log("Capitalized string:", capitalizedStr);
+
+Q.50 What is the drawback of declaring methods directly in JavaScript objects?
+
+--> If methods are declared directly in JavaScript objects, they get copied to every instance of that object, consuming more memory. This is inefficient, especially if the methods remain the same across all instances.
+
+Q.51 Write a JavaScript program to get the current date. Expected Output : mm-dd-yyyy,
+mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy?
+
+--> function getCurrentDate(format) {
+    const currentDate = new Date();
+    const day = currentDate.getDate();
+    const month = currentDate.getMonth() + 1;
+    const year = currentDate.getFullYear();
+
+    switch (format) {
+        case "mm-dd-yyyy":
+            return month + "-" + day + "-" + year;
+        case "mm/dd/yyyy":
+            return month + "/" + day + "/" + year;
+        case "dd-mm-yyyy":
+            return day + "-" + month + "-" + year;
+        case "dd/mm/yyyy":
+            return day + "/" + month + "/" + year;
+        default:
+            return "Invalid format";
+    }
+}
+
+console.log("mm-dd-yyyy:", getCurrentDate("mm-dd-yyyy"));
+console.log("mm/dd/yyyy:", getCurrentDate("mm/dd/yyyy"));
+console.log("dd-mm-yyyy:", getCurrentDate("dd-mm-yyyy"));
+console.log("dd/mm/yyyy:", getCurrentDate("dd/mm/yyyy"));
+
+Q.52 Use indexOf to determine the position of the first occurrence of a in 30 Days Of
+JavaScript?
+
+--> const str = "30 Days Of JavaScript";
+console.log("Position of 'a':", str.indexOf('a'));
+
+Q,53 Use lastIndexOf to determine the position of the last occurrence of a in 30 Days Of
+JavaScript?
+
+--> const str = "30 Days Of JavaScript";
+console.log("Position of last 'a':", str.lastIndexOf('a'));
+
+Q.54 Form Validtion in JS?
+
+--> Form validation ensures that user input is correct before submitting a form to the server. This can be done using JavaScript by checking the input fields against certain criteria such as required fields, valid email format, valid number format, etc.
+
+
+Q.55 Form in Email, number, Password, Validation?
+
+--> function validateEmail(email) {
+    const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return pattern.test(email);
+}
+
+console.log("Is 'example@example.com' a valid email?", validateEmail('example@example.com'));
+
+Q.56 Dynamic Form Validation in JS?
+
+--> Dynamic form validation involves validating form fields as the user interacts with them, providing immediate feedback to the user. This can be achieved by attaching event listeners to form fields (such as input or change events) and validating the input based on certain criteria.
+
+Q.57 how many type of JS Event? How to use it ?
+
+--> javaScript events can be categorized into several types:
+
+(1) Mouse events (click, mouseover, mouseout, etc.)
+(2) Keyboard events (keydown, keyup, keypress)
+(3) Form events (submit, change, focus, blur)
+(4) Document/window events (load, resize, scroll)
+(5) You can use these events by attaching event listeners to DOM elements and specifying the 
+ event type and the function to be executed when the event occurs.
+
+Q.59 What is Bom vs Dom in JS?
+
+--> BOM (Browser Object Model) and DOM (Document Object Model) are two different models in JavaScript.
+
+(1) BOM provides objects and methods to interact with the browser window (e.g., window object, location object, history object).
+
+(2) DOM provides objects and methods to interact with the HTML document (e.g., document object, element objects).
+
+Q.60 Array vs object defences in JS?
+
+--> 1.Arrays are ordered collections of values, accessed by numeric indices. Objects are collections of key-value pairs, accessed by keys.
+
+2. Arrays have a length property, whereas objects do not.
+
+3. Arrays have built-in methods like push(), pop(), slice(), etc., whereas objects do not have built-in methods for manipulation.
+
+Q.61 Split the string into an array using split() Method?
+
+--> const str = "Hello, World!";
+const arr = str.split(', ');
+console.log("Array:", arr);
+
+Q.62 Check if the string contains a word Script using includes() method?
+
+--> const str = "30 Days of JavaScript";
+console.log("Does the string contain 'Script'?", str.includes('Script'));
+
+Q.63 Change all the string characters to lowercase letters using toLowerCase() Method.
+
+--> const str = "30 Days of JavaScript";
+console.log("Lowercase string:", str.toLowerCase());
+
+Q.64 What is Character at index 15 in ’30 Days of JavaScript’ string? Use charAt() method.
+
+--> const str = "30 Days of JavaScript";
+console.log("Character at index 15:", str.charAt(15));
+
+Q.65 copy to one string to another string in JS?
+
+--> const str1 = "Hello, World!";
+const str2 = str1;
+console.log("Copied string:", str2);
+
+Q.66 Find the length of a string without using libraryFunction?
+
+--> function findStringLength(str) {
+    let length = 0;
+    while (str[length] !== undefined) {
+        length++;
+    }
+    return length;
+}
+
+console.log("Length of 'Hello, World!':", findStringLength("Hello, World!"));
+
+• What is JavaScript?
+
+--> javaScript is a high-level, interpreted programming language primarily used for client-side web development. It allows developers to add interactivity and dynamic behavior to web pages.
+
+
+• What is the use of isNaN function?
+
+--> isNaN function: It stands for "is Not a Number". It checks whether a value is NaN (Not-a-Number) or not. It returns true if the value is NaN, otherwise false.
+
+• What is negative Infinity?
+
+--> Negative Infinity: It represents a value that is lower than any other number in JavaScript. It is the result of operations like dividing by zero or multiplying a negative number by Infinity.
+
+• Which company developed JavaScript?
+
+--> JavaScript was developed by Netscape Communications Corporation, initially for use within their Netscape Navigator web browser.
+
+• What are undeclared and undefined variables?
+
+--> Undeclared variables are those that have been declared without the var, let, or const keyword. They are not assigned a value and will throw a reference error if used before being declared. Undefined variables are those that have been declared but not assigned a value.
+
+• Write the code for adding new elements dynamically?
+
+--> var newElement = document.createElement('div');
+
+newElement.textContent = "New Element";
+
+document.getElementById('container').appendChild(newElement);
+
+• What is the difference between ViewState and SessionState?
+
+--> ViewState: ViewState is used to store the state of the page between postbacks. It is maintained on the client-side as a hidden field.
+
+SessionState: SessionState is used to store user-specific information across multiple requests. It is maintained on the server-side and is unique to each user session.
+
+• What is === operator?
+
+--> === operator: It is a strict equality operator in JavaScript. It returns true if the operands are equal and of the same type, otherwise false.
+
+• How can the style/class of an element be changed?
+
+--> Style/class of an element can be changed using the style property or by adding/removing classes using JavaScript.
+
+• How to read and write a file using JavaScript?
+
+--> Reading and writing a file using JavaScript is primarily done in web development environments using server-side languages like Node.js, where file system operations are available through built-in modules like fs.
+
+• What are all the looping structures in JavaScript?
+
+--> Looping structures in JavaScript:
+
+for loop
+while loop
+do-while loop
+for...in loop
+for...of loop
+
+• How can you convert the string of any base to an integer in JavaScript?
+
+--> Converting a string of any base to an integer in JavaScript can be done using the parseInt function, specifying the base as the second argument.
+
+• What is the function of the delete operator?
+
+-->  delete operator: It is used to delete a property from an object. It can also be used to delete an element from an array.
+
+• What are all the types of Pop up boxes available in JavaScript?
+
+--> Types of pop up boxes available in JavaScript:
+
+Alert box
+Confirm box
+Prompt box
+
+• What is the use of Void (0)?
+
+--> `void(0)`: It is used to prevent the browser from taking any action when clicking on a link. It is often used as the href attribute value in anchor tags to create "clickable" placeholders.
+
+• How can a page be forced to load another page in JavaScript?
+
+--> You can use the window.location object to redirect the browser to another page.
+
+• What are the disadvantages of using innerHTML in JavaScript?
+
+--> It removes all event listeners and handlers attached to the elements within the affected element, which can cause unexpected behavior.
+
+It can potentially introduce security vulnerabilities like cross-site scripting (XSS) attacks if the content being inserted is not properly sanitized.
+
+It is slower compared to other methods like creating and appending new DOM elements directly.
+
+• Create password field with show hide functionalities
+
+--> <input type="password" id="passwordField">
+<button id="toggleButton">Show</button>
+
+const passwordField = document.getElementById('passwordField');
+const toggleButton = document.getElementById('toggleButton');
+
+toggleButton.addEventListener('click', function() {
+    if (passwordField.type === 'password') {
+        passwordField.type = 'text';
+        toggleButton.textContent = 'Hide';
+    } else {
+        passwordField.type = 'password';
+        toggleButton.textContent = 'Show';
+    }
+});
+
+create basic math operation in js
+
+--> <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maths Operations</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    .btn {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+        font-size: 16px;
+    }
+
+    #result {
+        margin-top: 10px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Maths Operations</h2>
+    <label for="firstNumber">Enter first number:</label>
+    <input type="number" id="firstNumber" placeholder="Enter first number">
+
+    <label for="secondNumber">Enter second number:</label>
+    <input type="number" id="secondNumber" placeholder="Enter second number">
+
+    <div>
+        <button class="btn" onclick="performOperation('add')">+</button>
+        <button class="btn" onclick="performOperation('subtract')">-</button>
+        <button class="btn" onclick="performOperation('multiply')">*</button>
+        <button class="btn" onclick="performOperation('divide')">/</button>
+        <button class="btn" onclick="performOperation('percentage')">%</button>
+    </div>
+
+    <div id="result"></div>
+</div>
+
+<script>
+    function performOperation(operation) {
+        const firstNumber = parseFloat(document.getElementById('firstNumber').value);
+        const secondNumber = parseFloat(document.getElementById('secondNumber').value);
+        let result;
+
+        switch (operation) {
+            case 'add':
+                result = firstNumber + secondNumber;
+                break;
+            case 'subtract':
+                result = firstNumber - secondNumber;
+                break;
+            case 'multiply':
+                result = firstNumber * secondNumber;
+                break;
+            case 'divide':
+                result = firstNumber / secondNumber;
+                break;
+            case 'percentage':
+                result = (firstNumber / 100) * secondNumber;
+                break;
+        }
+
+        document.getElementById('result').innerText = "Result: " + result;
+    }
+</script>
+</body>
+</html>
+
+result
+
+--> <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marksheet</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
+
+    .container {
+        width: 60%;
+        margin: 50px auto;
+        text-align: center;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        margin-top: 0;
+        text-align: left;
+    }
+
+    p {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    input[type="number"] {
+        width: 50px;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+
+    #total, #percentage {
+        text-align: left;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Marksheet for IT</h1>
+    <p>Enter marks:</p>
+    <ol>
+        <li>C Language: <input type="number" min="0" max="50"></li>
+        <li>C++ Language: <input type="number" min="0" max="50"></li>
+        <li>Database: <input type="number" min="0" max="50"></li>
+        <li>HTML: <input type="number" min="0" max="50"></li>
+        <li>CSS: <input type="number" min="0" max="50"></li>
+        <li>PHP: <input type="number" min="0" max="50"></li>
+        <li>Core Java: <input type="number" min="0" max="50"></li>
+    </ol>
+    <button onclick="calculateResult()">Result</button>
+    <div id="total"></div>
+    <div id="percentage"></div>
+</div>
+
+<script>
+    function calculateResult() {
+        const inputs = document.querySelectorAll('input[type="number"]');
+        let total = 0;
+
+        inputs.forEach(input => {
+            total += parseInt(input.value) || 0;
+        });
+
+        document.getElementById('total').innerText = "Total: " + total;
+        document.getElementById('percentage').innerText = "Percentage: " + ((total / 350) * 100).toFixed(2) + "%";
+    }
+</script>
+</body>
+</html>
